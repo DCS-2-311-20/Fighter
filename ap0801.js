@@ -45,11 +45,11 @@ function init() {
   orbitControls.enableDumping = true;
   
   // モデルの読み込み
-  let xwing;
-  function loadModel() {
-    render();
+  let xwing; // モデルを格納する変数
+  function loadModel() { // モデル読み込み関数の定義
+    render(); // 描画開始
   }
-  loadModel();
+  loadModel(); // モデル読み込み実行
 
   // 背景の設定
   let renderTarget;
@@ -75,6 +75,11 @@ function init() {
   // 構造物の作成
   const buildings = new THREE.Group();
   {
+    const w = 10;
+    const h = 20;
+    const d = 10;
+    const gap = 10;
+    const n = 6;
 
   }
   scene.add(buildings);
@@ -92,7 +97,7 @@ function init() {
   const controlPoints = [
     [0, 0, 0],
     [0, 5, 40],
-    [40, 0, 40],
+    [40, 5, 40],
     [40, 10, -20],
     [-40, 10, -20],
     [-40, 0, 20],
@@ -118,9 +123,9 @@ function init() {
   function render() {
     // xwing の位置と向きの設定
 
-    // カメラの位置の切り替え
- 
     // 背景の切り替え
+ 
+    // カメラの位置の切り替え
  
     // コース表示の有無
     
