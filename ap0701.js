@@ -1,14 +1,14 @@
 //
-// 応用プログラミング 第8回 課題1 (ap0801.js)
-// G18400-2021 拓殖太郎
+// 応用プログラミング 第7回 課題1 (ap0701.js)
+// G38400-2023 拓殖太郎
 //
 "use strict"; // 厳格モード
 
 // ライブラリをモジュールとして読み込む
 import * as THREE from "three";
-import {GLTFLoader} from "gltf";
-import {OrbitControls} from "orbit";
-import GUI from "gui";
+import {GLTFLoader} from "three/addons";
+import {OrbitControls} from "three/addons";
+import GUI from "ili-gui";
 
 // ３Ｄページ作成関数の定義
 function init() {
@@ -61,14 +61,14 @@ function init() {
   // 環境ライト
   {
     const light = new THREE.AmbientLight();
-    light.intensity=0.6;
+    light.intensity=0.8;
     scene.add(light);
   }
-  // 単方向ライト
+  // スポットライト
   { 
-    const light = new THREE.DirectionalLight();
-    light.position.set(50, 50, 30); 
-    // ここから原点に向かう線と平行に光が差す
+    const light = new THREE.PointLight(0xffffff, 3000);
+    light.position.set(0, 40, 0); 
+    light.lookAt(0,0,0);
     scene.add(light);
   }
 
