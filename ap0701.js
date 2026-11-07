@@ -6,9 +6,8 @@
 
 // ライブラリをモジュールとして読み込む
 import * as THREE from "three";
-import {GLTFLoader} from "three/addons";
-import {OrbitControls} from "three/addons";
-import GUI from "ili-gui";
+import {OrbitControls, GLTFLoader} from "three/addons";
+import GUI from "lil-gui";
 
 // ３Ｄページ作成関数の定義
 function init() {
