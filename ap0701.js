@@ -117,9 +117,11 @@ function init() {
 
   // 描画処理
   // 描画のための変数
-  const clock = new THREE.Clock();
+  const timer = new THREE.Timer();
+  timer.connect(document);
   // 描画関数
-  function render() {
+  function render(timestamp) {
+    timer.update(timestamp);
     // xwing の位置と向きの設定
 
     // 背景の切り替え
